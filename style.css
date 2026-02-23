@@ -120,3 +120,87 @@ h1 {
     border-radius: 1rem;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+.animal-test-section {
+    margin-top: 4rem;
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--container-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.upload-wrapper {
+    margin: 1.5rem 0;
+    border: 2px dashed #ccc;
+    padding: 2rem;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.upload-wrapper:hover {
+    border-color: #2196F3;
+    background-color: rgba(33, 150, 243, 0.05);
+}
+
+.image-preview {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.image-preview img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+}
+
+.animal-label-container {
+    margin: 1rem 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.animal-label-container div {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--bg-color);
+}
+
+.upload-btn, .retry-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #2196F3;
+    color: white;
+    transition: background-color 0.2s;
+}
+
+.upload-btn:hover, .retry-btn:hover {
+    background-color: #1976D2;
+}
+
+.retry-btn {
+    background-color: #757575;
+    margin-top: 1rem;
+}
+
+.roulette-section {
+    margin-top: 4rem;
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--container-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}

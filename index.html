@@ -5,11 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lotto Number Generator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 </head>
 <body>
     <button id="theme-toggle">Dark Mode</button>
     <h1>Lotto Number Generator</h1>
     <lotto-generator></lotto-generator>
+
+    <section class="roulette-section">
+        <h2>돌려돌려 돌림판</h2>
+        <button id="show-roulette-btn">룰렛 돌리기</button>
+        <div id="roulette-container" style="display: none;">
+            <roulette-generator></roulette-generator>
+        </div>
+    </section>
+
+    <section class="animal-test-section">
+        <h2>동물상 테스트 (강아지 vs 고양이)</h2>
+        <div class="upload-wrapper" id="upload-wrapper">
+            <input type="file" id="image-upload" accept="image/*" hidden>
+            <div id="image-preview" class="image-preview">
+                <p>얼굴 사진을 업로드하거나 선택하세요</p>
+            </div>
+            <button type="button" class="upload-btn" id="upload-btn">사진 선택하기</button>
+        </div>
+        <div id="animal-label-container" class="animal-label-container"></div>
+        <button type="button" class="retry-btn" id="retry-btn" style="display: none;">다시 하기</button>
+    </section>
 
     <section class="contact-section">
         <h2>제휴 문의</h2>
