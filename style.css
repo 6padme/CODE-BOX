@@ -13,10 +13,11 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
@@ -40,4 +41,82 @@ h1 {
     color: var(--bg-color);
     font-weight: bold;
     transition: 0.3s;
+    z-index: 100;
+}
+
+.contact-section {
+    margin-top: 4rem;
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--container-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: inherit;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.submit-btn {
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.2s;
+    margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.comments-section {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--container-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }

@@ -10,6 +10,52 @@
     <button id="theme-toggle">Dark Mode</button>
     <h1>Lotto Number Generator</h1>
     <lotto-generator></lotto-generator>
+
+    <section class="contact-section">
+        <h2>제휴 문의</h2>
+        <form action="https://formspree.io/f/xjgepezg" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="company">회사명/성함</label>
+                <input type="text" id="company" name="company" required placeholder="회사명 또는 성함을 입력해주세요">
+            </div>
+            <div class="form-group">
+                <label for="email">이메일 주소</label>
+                <input type="email" id="email" name="_replyto" required placeholder="example@email.com">
+            </div>
+            <div class="form-group">
+                <label for="subject">문의 제목</label>
+                <input type="text" id="subject" name="subject" required placeholder="제휴 문의 제목">
+            </div>
+            <div class="form-group">
+                <label for="message">문의 내용</label>
+                <textarea id="message" name="message" required placeholder="상세한 문의 내용을 입력해주세요"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">문의하기</button>
+        </form>
+    </section>
+
+    <section class="comments-section">
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://pbclass.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+
     <script src="main.js" type="module"></script>
 </body>
 </html>
