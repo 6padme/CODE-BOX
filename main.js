@@ -16,6 +16,14 @@ class LottoGenerator extends HTMLElement {
     return Array.from(numbers).sort((a, b) => a - b);
   }
 
+  getBallColor(num) {
+    if (num <= 10) return '#fbc400';
+    if (num <= 20) return '#69c8f2';
+    if (num <= 30) return '#ff7272';
+    if (num <= 40) return '#aaa';
+    return '#b0d840';
+  }
+
   render() {
     this.shadowRoot.innerHTML = `
       <style>
@@ -47,12 +55,7 @@ class LottoGenerator extends HTMLElement {
           text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
         /* Lotto ball colors */
-        .number:nth-child(1) { background-color: #fbc400; }
-        .number:nth-child(2) { background-color: #69c8f2; }
-        .number:nth-child(3) { background-color: #ff7272; }
-        .number:nth-child(4) { background-color: #aaa; }
-        .number:nth-child(5) { background-color: #b0d840; }
-        .number:nth-child(6) { background-color: #c7c7c7; }
+        /* Colors assigned dynamically by number range */
 
         button {
           padding: 12px 24px;
@@ -70,9 +73,9 @@ class LottoGenerator extends HTMLElement {
       </style>
       <div class="lotto-container">
         <div class="numbers">
-          ${this.generateNumbers().map(number => `<div class="number">${number}</div>`).join('')}
+          ${this.generateNumbers().map(number => `<div class="number" style="background-color:${this.getBallColor(number)}">${number}</div>`).join('')}
         </div>
-        <button id="generate-btn">Generate New Numbers</button>
+        <button id="generate-btn">새 번호 생성</button>
       </div>
     `;
 
