@@ -1,87 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>심플 툴 박스 - 로또 번호 생성기, 돌림판, 동물상 테스트</title>
+    <meta name="description" content="무료로 제공되는 로또 번호 생성기, 돌려돌려 돌림판, 그리고 AI 동물상 테스트를 한 곳에서 즐겨보세요.">
+    <meta name="keywords" content="로또번호생성기, 돌림판, 동물상테스트, 강아지상, 고양이상, 점심메뉴추천">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Google AdSense -->
     <meta name="google-adsense-account" content="ca-pub-2177782177495186">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2177782177495186"
      crossorigin="anonymous"></script>
+
+    <!-- External Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 </head>
 <body>
-    <button id="theme-toggle">Dark Mode</button>
-    <h1>Lotto Number Generator</h1>
-    <lotto-generator></lotto-generator>
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo">Simple Tool Box</div>
+            <ul class="nav-links">
+                <li><a href="#lotto">로또 생성기</a></li>
+                <li><a href="#roulette">돌림판</a></li>
+                <li><a href="#animal">동물상 테스트</a></li>
+                <li><a href="#contact">문의하기</a></li>
+            </ul>
+            <button id="theme-toggle">Dark Mode</button>
+        </nav>
+    </header>
 
-    <section class="roulette-section">
-        <h2>돌려돌려 돌림판</h2>
-        <button id="show-roulette-btn">룰렛 돌리기</button>
-        <div id="roulette-container" style="display: none;">
-            <roulette-generator></roulette-generator>
+    <main>
+        <section id="lotto" class="tool-section">
+            <h1>로또 번호 생성기</h1>
+            <p class="tool-description">매주 행운을 꿈꾸시나요? 무작위 알고리즘을 통해 1부터 45까지의 숫자 중 중복 없이 6개의 번호를 생성해 드립니다. 당신의 오늘 행운 번호를 확인해보세요.</p>
+            <lotto-generator></lotto-generator>
+        </section>
+
+        <section id="roulette" class="tool-section roulette-section">
+            <h2>돌려돌려 돌림판</h2>
+            <p class="tool-description">점심 메뉴, 저녁 메뉴, 혹은 커피 내기까지! 결정하기 힘든 순간, 돌림판이 대신 결정해 드립니다. 직접 항목을 입력하고 행운의 화살표가 어디를 가리키는지 확인해보세요.</p>
+            <button id="show-roulette-btn">룰렛 돌리기</button>
+            <div id="roulette-container" style="display: none;">
+                <roulette-generator></roulette-generator>
+            </div>
+        </section>
+
+        <section id="animal" class="tool-section animal-test-section">
+            <h2>동물상 테스트 (강아지 vs 고양이)</h2>
+            <p class="tool-description">구글 Teachable Machine AI 기술을 활용한 얼굴 분석 테스트입니다. 나의 인상은 강아지상일까요, 고양이상일까요? 사진을 업로드하여 AI의 분석 결과를 확인해보세요.</p>
+            <div class="upload-wrapper" id="upload-wrapper">
+                <input type="file" id="image-upload" accept="image/*" hidden>
+                <div id="image-preview" class="image-preview">
+                    <p>얼굴 사진을 업로드하거나 선택하세요</p>
+                </div>
+                <button type="button" class="upload-btn" id="upload-btn">사진 선택하기</button>
+            </div>
+            <div id="animal-label-container" class="animal-label-container"></div>
+            <button type="button" class="retry-btn" id="retry-btn" style="display: none;">다시 하기</button>
+        </section>
+
+        <section id="contact" class="tool-section contact-section">
+            <h2>제휴 문의 및 피드백</h2>
+            <p class="tool-description">서비스 이용 중 불편한 점이나 제휴 관련 문의가 있으시면 아래 폼을 통해 남겨주세요. 소중한 의견을 바탕으로 더 나은 서비스를 만들어 가겠습니다.</p>
+            <form action="https://formspree.io/f/xjgepezg" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="company">회사명/성함</label>
+                    <input type="text" id="company" name="company" required placeholder="회사명 또는 성함을 입력해주세요">
+                </div>
+                <div class="form-group">
+                    <label for="email">이메일 주소</label>
+                    <input type="email" id="email" name="_replyto" required placeholder="example@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="subject">문의 제목</label>
+                    <input type="text" id="subject" name="subject" required placeholder="제휴 문의 제목">
+                </div>
+                <div class="form-group">
+                    <label for="message">문의 내용</label>
+                    <textarea id="message" name="message" required placeholder="상세한 문의 내용을 입력해주세요"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">문의하기</button>
+            </form>
+        </section>
+
+        <section class="tool-section comments-section">
+            <h2>사용자 댓글</h2>
+            <div id="disqus_thread"></div>
+            <script>
+                (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://pbclass.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Simple Tool Box. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#" onclick="showModal('privacy')">개인정보처리방침</a></li>
+                <li><a href="#" onclick="showModal('terms')">이용약관</a></li>
+                <li><a href="#contact">문의하기</a></li>
+            </ul>
         </div>
-    </section>
+    </footer>
 
-    <section class="animal-test-section">
-        <h2>동물상 테스트 (강아지 vs 고양이)</h2>
-        <div class="upload-wrapper" id="upload-wrapper">
-            <input type="file" id="image-upload" accept="image/*" hidden>
-            <div id="image-preview" class="image-preview">
-                <p>얼굴 사진을 업로드하거나 선택하세요</p>
-            </div>
-            <button type="button" class="upload-btn" id="upload-btn">사진 선택하기</button>
+    <!-- Simple Modals for Legal Content -->
+    <div id="legal-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
         </div>
-        <div id="animal-label-container" class="animal-label-container"></div>
-        <button type="button" class="retry-btn" id="retry-btn" style="display: none;">다시 하기</button>
-    </section>
-
-    <section class="contact-section">
-        <h2>제휴 문의</h2>
-        <form action="https://formspree.io/f/xjgepezg" method="POST" class="contact-form">
-            <div class="form-group">
-                <label for="company">회사명/성함</label>
-                <input type="text" id="company" name="company" required placeholder="회사명 또는 성함을 입력해주세요">
-            </div>
-            <div class="form-group">
-                <label for="email">이메일 주소</label>
-                <input type="email" id="email" name="_replyto" required placeholder="example@email.com">
-            </div>
-            <div class="form-group">
-                <label for="subject">문의 제목</label>
-                <input type="text" id="subject" name="subject" required placeholder="제휴 문의 제목">
-            </div>
-            <div class="form-group">
-                <label for="message">문의 내용</label>
-                <textarea id="message" name="message" required placeholder="상세한 문의 내용을 입력해주세요"></textarea>
-            </div>
-            <button type="submit" class="submit-btn">문의하기</button>
-        </form>
-    </section>
-
-    <section class="comments-section">
-        <div id="disqus_thread"></div>
-        <script>
-            /**
-            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-            /*
-            var disqus_config = function () {
-            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            */
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://pbclass.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </section>
+    </div>
 
     <script src="main.js" type="module"></script>
+    <script>
+        function showModal(type) {
+            const modal = document.getElementById('legal-modal');
+            const body = document.getElementById('modal-body');
+            if(type === 'privacy') {
+                body.innerHTML = '<h2>개인정보처리방침</h2><p>본 서비스는 사용자가 업로드한 이미지를 서버에 저장하지 않으며, AI 분석은 브라우저 내에서만 실행됩니다. 문의 폼을 통해 수집된 이메일 주소는 문의 답변 용도로만 사용됩니다.</p>';
+            } else {
+                body.innerHTML = '<h2>이용약관</h2><p>본 서비스에서 제공하는 결과는 재미를 위한 것이며, 실제 법적/경제적 효력을 갖지 않습니다. 사용자는 서비스를 자유롭게 이용할 수 있으나, 불법적인 목적으로의 사용을 금합니다.</p>';
+            }
+            modal.style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById('legal-modal').style.display = "none";
+        }
+        window.onclick = function(event) {
+            const modal = document.getElementById('legal-modal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
