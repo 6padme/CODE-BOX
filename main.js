@@ -331,20 +331,22 @@ imageUpload.addEventListener('change', async (e) => {
     // Show preview
     const reader = new FileReader();
     reader.onload = async (event) => {
-        imagePreview.innerHTML = `<img src="${event.target.result}" id="uploaded-image">`;
-        animalLabelContainer.innerHTML = "AI가 분석 중입니다...";
-        
-        // Load model and predict
-        await loadModel();
-        const uploadedImg = document.getElementById('uploaded-image');
-        
-        // Wait for image to load to ensure it has dimensions
-        uploadedImg.onload = async () => {
-            const prediction = await model.predict(uploadedImg);
+        // Create an image element to ensure it's loaded before prediction
+        const img = new Image();
+        img.id = "uploaded-image";
+        img.onload = async () => {
+            imagePreview.innerHTML = "";
+            imagePreview.appendChild(img);
+            animalLabelContainer.innerHTML = "AI가 분석 중입니다...";
+            
+            // Load model and predict
+            await loadModel();
+            const prediction = await model.predict(img);
             displayResults(prediction);
             retryBtn.style.display = 'inline-block';
             document.getElementById('upload-wrapper').style.display = 'none';
         };
+        img.src = event.target.result;
     };
     reader.readAsDataURL(file);
 });
