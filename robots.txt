@@ -1,6 +1,18 @@
 User-agent: *
 Allow: /
 
+# Google Search Bot
+User-agent: Googlebot
+Allow: /
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing Search Bot
+User-agent: Bingbot
+Allow: /
+
 # Naver Search Bot
 User-agent: Yeti
 Allow: /
