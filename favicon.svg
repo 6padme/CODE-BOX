@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e0e7ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- App icon background -->
+  <rect width="32" height="32" rx="7" fill="url(#bg)"/>
+
+  <!-- Toolbox handle arc -->
+  <path d="M11.5 13 L11.5 10 Q11.5 6.5 16 6.5 Q20.5 6.5 20.5 10 L20.5 13"
+        fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- Toolbox lid strip -->
+  <rect x="5" y="13" width="22" height="4.5" rx="1.5" fill="rgba(255,255,255,0.85)"/>
+
+  <!-- Toolbox body -->
+  <rect x="5" y="17" width="22" height="10" rx="2" fill="url(#body)"/>
+
+  <!-- Latch center -->
+  <rect x="13" y="19.5" width="6" height="4.5" rx="1.5" fill="#6366f1"/>
+  <rect x="14.5" y="21.5" width="3" height="1.2" rx="0.6" fill="white"/>
+
+  <!-- Sparkle top-right (fun/luck 느낌) -->
+  <path d="M26 4 L26.5 5.5 L28 5.5 L27 6.5 L27.5 8 L26 7 L24.5 8 L25 6.5 L24 5.5 L25.5 5.5 Z"
+        fill="#fbbf24"/>
+</svg>
