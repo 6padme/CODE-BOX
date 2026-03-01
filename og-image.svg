@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4338ca"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.15)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.05)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1150" cy="80"  r="220" fill="rgba(255,255,255,0.04)"/>
+  <circle cx="50"   cy="560" r="180" fill="rgba(255,255,255,0.04)"/>
+  <circle cx="1050" cy="550" r="120" fill="rgba(255,255,255,0.03)"/>
+
+  <!-- Top badge -->
+  <rect x="490" y="70" width="220" height="44" rx="22" fill="rgba(255,255,255,0.15)"/>
+  <text x="600" y="99" font-family="'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="20" fill="rgba(255,255,255,0.9)" text-anchor="middle" font-weight="600">무료 온라인 도구 모음</text>
+
+  <!-- Main title -->
+  <text x="600" y="220" font-family="'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="96" font-weight="800" fill="white" text-anchor="middle">심플 툴 박스</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="295" font-family="'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="32" fill="rgba(255,255,255,0.75)" text-anchor="middle">회원가입 없이 무료로 즐기는 일상 도구</text>
+
+  <!-- Divider -->
+  <line x1="400" y1="335" x2="800" y2="335" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+
+  <!-- Feature cards -->
+  <!-- Lotto card -->
+  <rect x="90" y="370" width="310" height="160" rx="20" fill="url(#card)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <text x="245" y="425" font-family="sans-serif" font-size="46" text-anchor="middle">🎯</text>
+  <text x="245" y="468" font-family="'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="24" font-weight="700" fill="white" text-anchor="middle">로또 번호 생성기</text>
+  <text x="245" y="498" font-family="'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="17" fill="rgba(255,255,255,0.6)" text-anchor="middle">1~45 무작위 6개 즉시 생성</text>
+
+  <!-- Roulette card -->
+  <rect x="445" y="370" width="310" height="160" rx="20" fill="url(#card)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <text x="600" y="425" font-family="sans-serif" font-size="46" text-anchor="middle">🎡</text>
+  <text x="600" y="468" font-family="'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="24" font-weight="700" fill="white" text-anchor="middle">돌림판 (룰렛)</text>
+  <text x="600" y="498" font-family="'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="17" fill="rgba(255,255,255,0.6)" text-anchor="middle">결정장애 해결! 공정한 선택</text>
+
+  <!-- Animal card -->
+  <rect x="800" y="370" width="310" height="160" rx="20" fill="url(#card)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <text x="955" y="425" font-family="sans-serif" font-size="46" text-anchor="middle">🐾</text>
+  <text x="955" y="468" font-family="'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="24" font-weight="700" fill="white" text-anchor="middle">AI 동물상 테스트</text>
+  <text x="955" y="498" font-family="'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="17" fill="rgba(255,255,255,0.6)" text-anchor="middle">강아지상 vs 고양이상 분석</text>
+
+  <!-- Footer URL -->
+  <text x="600" y="590" font-family="'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="22" fill="rgba(255,255,255,0.4)" text-anchor="middle">simple-tool-box.web.app</text>
+</svg>

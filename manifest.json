@@ -1,0 +1,40 @@
+{
+  "name": "심플 툴 박스",
+  "short_name": "툴박스",
+  "description": "무료 로또 번호 생성기, 돌림판, AI 동물상 테스트를 한 곳에서",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6366f1",
+  "lang": "ko",
+  "dir": "ltr",
+  "categories": ["utilities", "entertainment"],
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "로또 번호 생성기",
+      "short_name": "로또",
+      "description": "행운의 로또 번호 6개 즉시 생성",
+      "url": "/#lotto"
+    },
+    {
+      "name": "돌림판",
+      "short_name": "돌림판",
+      "description": "결정장애 해결! 공정한 돌림판",
+      "url": "/#roulette"
+    },
+    {
+      "name": "AI 동물상 테스트",
+      "short_name": "동물상",
+      "description": "나는 강아지상? 고양이상?",
+      "url": "/#animal"
+    }
+  ]
+}

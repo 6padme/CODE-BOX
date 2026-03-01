@@ -8,12 +8,29 @@
     <meta name="keywords" content="로또번호생성기, 로또번호추천, 돌림판, 룰렛, 동물상테스트, 강아지상, 고양이상, 점심메뉴추천, 무료툴, 결정장애, 로또당첨확률">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Simple Tool Box">
+    <link rel="canonical" href="https://simple-tool-box.web.app/">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="심플 툴 박스">
 
     <!-- Open Graph -->
     <meta property="og:title" content="심플 툴 박스 - 로또 생성기, 돌림판, AI 동물상 테스트">
     <meta property="og:description" content="회원가입 없이 무료로 사용하는 로또 번호 생성기, 돌림판, AI 동물상 테스트 모음">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://simple-tool-box.web.app/">
     <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="심플 툴 박스">
+    <meta property="og:image" content="https://simple-tool-box.web.app/og-image.svg">
+    <meta property="og:image:alt" content="심플 툴 박스 - 무료 로또 생성기, 돌림판, AI 동물상 테스트">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="심플 툴 박스 - 로또 생성기, 돌림판, AI 동물상 테스트">
+    <meta name="twitter:description" content="회원가입 없이 무료로 사용하는 로또 번호 생성기, 돌림판, AI 동물상 테스트 모음">
+    <meta name="twitter:image" content="https://simple-tool-box.web.app/og-image.svg">
+    <meta name="twitter:image:alt" content="심플 툴 박스 - 무료 온라인 도구 모음">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
@@ -50,15 +67,177 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "심플 툴 박스",
-      "description": "무료 로또 번호 생성기, 돌림판(룰렛), AI 동물상 테스트를 제공하는 온라인 도구 모음 서비스",
-      "inLanguage": "ko",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "KRW"
-      }
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://simple-tool-box.web.app/#website",
+          "url": "https://simple-tool-box.web.app/",
+          "name": "심플 툴 박스",
+          "description": "무료 로또 번호 생성기, 돌림판(룰렛), AI 동물상 테스트를 제공하는 온라인 도구 모음 서비스",
+          "inLanguage": "ko",
+          "publisher": {
+            "@type": "Organization",
+            "name": "심플 툴 박스",
+            "url": "https://simple-tool-box.web.app/"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://simple-tool-box.web.app/#webpage",
+          "url": "https://simple-tool-box.web.app/",
+          "name": "심플 툴 박스 - 무료 로또 번호 생성기, 돌림판, AI 동물상 테스트",
+          "isPartOf": { "@id": "https://simple-tool-box.web.app/#website" },
+          "inLanguage": "ko",
+          "description": "무료 로또 번호 생성기, 돌림판(룰렛), AI 동물상 테스트를 제공하는 심플 툴 박스. 회원가입 없이 바로 사용 가능한 생활 밀착형 온라인 도구 모음."
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "로또 번호 생성기",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Web",
+          "url": "https://simple-tool-box.web.app/#lotto",
+          "description": "무작위 알고리즘으로 1~45 사이 숫자 중 중복 없이 6개를 즉시 생성하는 무료 로또 번호 생성기",
+          "inLanguage": "ko",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "돌림판 (룰렛)",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Web",
+          "url": "https://simple-tool-box.web.app/#roulette",
+          "description": "점심 메뉴, 팀 나누기, 경품 추첨 등 결정이 어려울 때 사용하는 무료 온라인 돌림판",
+          "inLanguage": "ko",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "AI 동물상 테스트",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Web",
+          "url": "https://simple-tool-box.web.app/#animal",
+          "description": "Google Teachable Machine AI로 강아지상인지 고양이상인지 분석하는 무료 동물상 테스트",
+          "inLanguage": "ko",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "이 번호 생성기는 진짜 랜덤인가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "네, JavaScript의 Math.random() 함수를 기반으로 한 무작위 알고리즘을 사용합니다. 1~45 사이의 숫자를 완전히 랜덤으로 선택하며 중복을 허용하지 않습니다. 매번 버튼을 누를 때마다 독립적으로 번호를 생성하므로 이전 결과에 영향을 받지 않습니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "한 번에 여러 게임(여러 세트)을 생성할 수 있나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "현재는 한 번에 하나의 게임(6개 번호 세트)을 생성합니다. 원하는 만큼 버튼을 반복 클릭하여 여러 세트의 번호를 얻으실 수 있습니다. 향후 한 번에 여러 세트를 생성하는 기능을 추가할 예정입니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "로또 1등 당첨금은 얼마나 되나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "1등 당첨금은 해당 회차 판매액과 1등 당첨자 수에 따라 매번 달라집니다. 일반적으로 수십억 원이며, 1등 당첨자가 1명뿐이라면 100억 원이 넘는 경우도 있습니다. 정확한 당첨금은 동행복권 공식 홈페이지에서 확인하실 수 있습니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "생성된 번호를 저장할 수 있나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "현재 자동 저장 기능은 없습니다. 마음에 드는 번호가 생성되면 화면을 캡처하거나 메모장에 직접 기록해 두세요. 향후 번호 저장 및 관리 기능을 추가할 예정입니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "로또는 어디서 구매할 수 있나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "로또는 전국 편의점, 복권 판매점에서 구매할 수 있습니다. 온라인으로는 동행복권 공식 홈페이지(dhlottery.co.kr)에서 회원가입 후 구매 가능합니다. 만 19세 이상만 구매 가능합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "돌림판 항목을 몇 개까지 입력할 수 있나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "기술적인 제한은 없지만, 최적의 시각적 경험을 위해 2~10개 사이의 항목을 권장합니다. 항목이 너무 많아지면 각 조각이 작아져 텍스트가 잘 보이지 않을 수 있습니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "돌림판 결과가 정말로 공정한가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "네, 모든 항목은 동일한 크기의 섹터로 나뉘어 동일한 당첨 확률을 가집니다. 회전 속도와 시작 각도도 매번 무작위로 설정되므로 특정 항목에 유리하거나 불리한 편향이 없습니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "돌림판에서 같은 결과가 계속 나오면 어떻게 하나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "확률적으로 같은 결과가 연속으로 나오는 것은 완전히 정상입니다. 이는 실제로 공정한 랜덤의 특성이기도 합니다. 특정 항목을 제외하고 싶다면 입력창에서 해당 항목을 지우고 수정 버튼을 누르세요."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "돌림판을 모바일에서도 사용할 수 있나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "네, 스마트폰과 태블릿에서도 편리하게 사용할 수 있습니다. 화면 크기에 맞게 자동으로 최적화되어 표시됩니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "동물상 테스트에서 사진이 서버에 저장되거나 외부로 전송되나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "절대 아닙니다. 업로드하신 이미지는 인터넷을 통해 어디에도 전송되지 않으며, 서버에 저장되지도 않습니다. AI 분석은 전적으로 사용자의 기기(브라우저) 내에서만 실행됩니다. 페이지를 닫으면 모든 데이터가 완전히 사라집니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "동물상 테스트 결과가 내 실제 외모를 정확히 반영하나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "이 테스트는 순수한 재미 목적으로 제작되었습니다. AI 모델이 이미지 특징을 분석하지만 100% 정확도를 보장하지 않습니다. 같은 사람도 사진의 각도, 조명, 표정, 화질에 따라 다른 결과가 나올 수 있습니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "동물상 테스트는 어떤 이미지 형식을 지원하나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "JPG, JPEG, PNG, WebP, GIF 등 일반적인 이미지 형식을 모두 지원합니다. 스마트폰으로 바로 찍은 사진도 업로드 가능합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "AI 동물상 분석에 왜 시간이 걸리나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "처음 사진을 업로드하면 AI 모델 파일을 인터넷에서 다운로드해야 합니다. 이 과정이 최초 1~2회에 걸쳐 수 초가 소요될 수 있습니다. 이후에는 모델이 캐시되어 훨씬 빠르게 분석됩니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "곰상, 토끼상, 여우상도 테스트할 수 있나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "현재는 강아지상과 고양이상 두 가지만 제공합니다. 곰상, 토끼상, 여우상, 사슴상 등 더 다양한 동물상 분류 모델을 개발하여 추가할 예정입니다."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
 </head>

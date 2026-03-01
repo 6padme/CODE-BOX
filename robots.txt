@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
 
+# Naver Search Bot
+User-agent: Yeti
+Allow: /
+
+# Daum Search Bot
+User-agent: Daum
+Allow: /
+
 Sitemap: https://simple-tool-box.web.app/sitemap.xml
