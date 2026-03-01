@@ -9,4 +9,4 @@ Allow: /
 User-agent: Daum
 Allow: /
 
-Sitemap: https://simple-tool-box.web.app/sitemap.xml
+Sitemap: https://code-box.pages.dev/sitemap.xml
